@@ -4,6 +4,7 @@ from typing import List
 def gen_palindromes(longest_palindrome_length: int) -> List[int]:
     """Generates all palindromes of longest_palindrome_length in reversed order."""
 
+    # Since palindromes are symmetric, generate half of the numbers sequentially.
     one_sided_palindrome_max = 10 ** (longest_palindrome_length // 2)
     palindromes = [int(f'{i}{"".join(reversed(str(i)))}') for i in range(one_sided_palindrome_max)]
 
