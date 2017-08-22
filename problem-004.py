@@ -24,8 +24,8 @@ def main():
     palindromes = gen_palindromes(longest_palindrome_length)
 
     for palindrome in palindromes:
-        for factor_1 in range(100, 1000):
-            if palindrome % factor_1 == 0 and is_three_digit(palindrome / factor_1) and float_is_int(palindrome / factor_1):
+        for factor in range(100, 1000):
+            if palindrome % factor == 0 and is_three_digit(palindrome / factor) and float_is_int(palindrome / factor):
                 print(palindrome)
                 return
 
